@@ -18,16 +18,24 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div className="container">
       
       <center>
         {data.map((dataObj, index) => {
           return (
-            <div>
-              <p>{dataObj.question}</p>
+            <div className='question-box'>
+              <h3>{dataObj.question}</h3>
+              <div className='answers-box'>
+                <button>{dataObj.correct_answer}</button>
+                <button>{dataObj.incorrect_answers[0]}</button>
+                <button>{dataObj.incorrect_answers[1]}</button>
+                <button>{dataObj.incorrect_answers[2]}</button>
+              </div>
+              <hr/>
             </div>
           );
         })}
+        <button className='check-btn'>Check Answer</button>
       </center>
     </div>
   );
