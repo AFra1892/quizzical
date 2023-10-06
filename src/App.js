@@ -11,7 +11,8 @@ function App() {
   const [checked, setChecked] = useState(false)
   const [correct, setCorrect] = useState(0)
 
-
+  // this function create a array of answers in a random order 
+  // sort function accepts a optional function for how to order the elements
   const shuffleArray = (arr) => arr.sort(() => Math.random() - 0.5);
 
   useEffect(() => {
